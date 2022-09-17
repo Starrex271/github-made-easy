@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.desktop {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    background-image: url(images/bg-main-desktop.png);
+    background-position: left;
+    background-size: cover;
+}
+
+.front {
+    position: absolute;
+    width: 380px;
+    height: 210px;
+    top: 15%;
+    right: 850px;
+    background: url(images/bg-card-front.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: #fff;
+    flex-direction: column;
+}
+
+.god {
+    width: 30px;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+.top {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.top span {
+    width: 100%;
+    font-size: 25px;
+    bottom: 90px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-around;
+}
+
+.date p {
+    font-size: 15px;
+    padding-left: 30px;
+}
+
+.date h4 {
+    padding-right: 70px;
+}
+
+back {
+    position: absolute;
+    width: 380px;
+    height: 210px;
+    top: 55%;
+    right: 750px;
+    background: url(images/bg-card-back.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cv {
+    padding: 95px 70px;
+    text-align: right;
+}
+
+.form {
+    display: block;
+    width: 60%;
+    height: 40vh;
+    /* border: 1px solid black; */
+    margin-top: 150px;
+    margin-right: 200px;
+}
+
+input[type="name"],
+input[type="number"] {
+    height: 40px;
+    width: 335px;
+    margin: 5px 0;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+}
+
+input[type="cvv"] {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+}
+
+.grid p {
+    display: inline-flex;
+    padding-right: 60px;
+}
+
+.form p {
+    padding-top: 20px;
+}
+
+.list {
+    padding-right: 90px;
+    padding-top: 5px;
+}
+
+.list select {
+    height: 40px;
+    width: 75px;
+    margin-right: 5px;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.list input[type="cvv"] {
+    margin-left: 20px;
+}
+
+.submit {
+    margin-top: 40px;
+    padding: 10px 135px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #999;
+    background-color: hsl(271, 74%, 21%);
+    color: #fff;
+}
+
+.submit:hover {
+    background-color: hsl(278, 94%, 30%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 740px) {
+    .desktop {
+        width: 100%;
+        height: 150px;
+        background-image: url(images/bg-main-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .back img {
+        position: absolute;
+        width: 380px;
+        height: 210px;
+        background: url(images/bg-card-back.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        border-radius: 5px;
+        color: #fff;
+    }
+}
