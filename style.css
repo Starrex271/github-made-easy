@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.desktop {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    background-image: url(images/bg-main-desktop.png);
+    background-position: left;
+    background-size: cover;
+}
+
+.front {
+    position: absolute;
+    width: 450px;
+    height: 270px;
+    top: 15%;
+    left: 180px;
+    background: url(images/bg-card-front.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: #fff;
+    flex-direction: column;
+}
+
+.god {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 30px;
+}
+
+.top {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.top span {
+    font-size: 30px;
+    padding: 90px 0px 0px 50px;
+    letter-spacing: 5px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-around;
+}
+
+.date p {
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.date h4 {
+    font-size: 20px;
+    padding-right: 70px;
+}
+
+.back {
+    position: absolute;
+    width: 450px;
+    height: 270px;
+    top: 55%;
+    left: 280px;
+    background: url(images/bg-card-back.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cv p {
+    padding: 122px 60px;
+    text-align: right;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.form {
+    display: inline-block;
+    width: 60%;
+    height: 40vh;
+    /* border: 1px solid black; */
+    margin-top: 200px;
+    margin-right: 200px;
+}
+
+input[type="name"],
+input[type="number"] {
+    height: 50px;
+    width: 335px;
+    margin: 5px 0;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+}
+
+input[type="cvv"] {
+    height: 50px;
+    width: 130px;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+}
+
+.grid p {
+    display: inline-flex;
+    padding-right: 60px;
+}
+
+.form p {
+    padding-top: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+}
+
+.pool {
+    margin-right: 50px;
+}
+
+.list input[type="text"] {
+    height: 50px;
+    width: 70px;
+    margin-right: 5px;
+    font-size: 18px;
+    text-indent: 15px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.submit {
+    margin-top: 40px;
+    padding: 15px 135px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #111;
+    background-color: hsl(271, 74%, 21%);
+    color: #fff;
+}
+
+.submit:hover {
+    background-color: hsl(278, 94%, 30%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 740px) {
+    .desktop {
+        width: 100%;
+        height: 150px;
+        background-image: url(images/bg-main-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .back img {
+        position: absolute;
+        width: 380px;
+        height: 210px;
+        background: url(images/bg-card-back.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        border-radius: 5px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .desktop {
+        width: 100%;
+        height: 150px;
+        background-image: url(images/bg-main-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .back img {
+        position: absolute;
+        width: 380px;
+        height: 210px;
+        background: url(images/bg-card-back.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        border-radius: 5px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .main {
+        display: inline-block;
+    }
+    .container {
+        width: 100%;
+        height: 30%;
+    }
+    .desktop {
+        position: relative;
+        width: 600px;
+        height: 300px;
+        background-image: url(images/bg-main-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .back {
+        position: absolute;
+        display: block;
+        width: 350px;
+        left: 220px;
+        top: 35px;
+        border-radius: 10px;
+        color: #fff;
+    }
+    .cv {
+        padding: 95px 50px;
+        text-align: right;
+    }
+    .front {
+        position: absolute;
+        width: 350px;
+        left: 50px;
+        top: 150px;
+        z-index: 1;
+    }
+    .top span {
+        width: 100%;
+        font-size: 22px;
+        bottom: 90px;
+        margin-left: 10px;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .date h4 {
+        padding-right: 50px;
+    }
+    .form {
+        margin: 100px auto;
+        width: auto;
+        height: 35vh;
+        padding: 40px;
+    }
+    input[type="name"],
+    input[type="number"] {
+        height: 50px;
+        width: 100%;
+        font-size: 15px;
+        text-indent: 15px;
+        border: 0.5px solid gray;
+        border-radius: 8px;
+    }
+    .form p {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .list {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .list input[type="text"] {
+        height: 50px;
+        width: 120px;
+        font-size: 15px;
+        text-indent: 5px;
+        border: 0.5px solid gray;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .list input[type="cvv"] {
+        margin-left: 10px;
+        height: 50px;
+        width: 230px;
+        font-size: 15px;
+        text-indent: 15px;
+        border: 0.5px solid gray;
+        border-radius: 8px;
+    }
+    .grid p {
+        display: inline-flex;
+        padding-right: 90px;
+    }
+    .submit {
+        margin-top: 30px;
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px #999;
+        background-color: hsl(271, 74%, 21%);
+        color: #fff;
+    }
+}
