@@ -4,7 +4,7 @@ const expiry = Array.from(document.querySelectorAll(".expiry"));
 const cvc = document.getElementById("cvc");
 const submit = document.getElementById("submit");
 const nameOnCard = document.querySelector(".cardholder-display");
-const numOnCard = document.querySelector(".card-numner-display");
+const numOnCard = document.querySelector(".card-number-display");
 const expMM = document.querySelector(".expiry-month-display");
 const expYY = document.querySelector(".expiry-year-display");
 const cvcDisplay = document.querySelector(".cvc-display");
@@ -99,8 +99,8 @@ function massValidate() {
     }
 
     function validateExpiry() {
-        let expMonth = /^(0[0-9]|1[1-2])(2)$/;
-        let expYear = /^[0-9][0-2])(4)$/;
+        let expMonth = /^(0[0-9]|1[1-2]){2}$/;
+        let expYear = /^[0-9][0-2]{4}$/;
 
         if (expiry[0].value.match(expMonth)) {
             expiryErrorMsg.innerHTML = "";
@@ -121,5 +121,62 @@ function massValidate() {
         let cvcErrorMsg = document.getElementById("error-cvc");
         let cvcExp = /^[0-9]{3}$/;
 
+        if (cvc.value === "") {
+            cvcErrorMsg.innerHTML = "Can't be blank!";
+        } else if (cvc.value.match(cvcExp)) {
+            cvcErrorMsg.innerHTML = "";
+        } else {
+            cvcErrorMsg.innerHTML = "Wrong format!"
+        }
     }
+    validateCard();
+    validateName();
+    validateExpiry();
+    validateCvc();
+
+    if (nameOnCard.innerHTML == cardholder.placeholder ||
+        numOnCard.innerHTML == cardholder.placeholder ||
+        expMM.innerHTML == "00" ||
+        expYY.innerHTML == "0000" ||
+        cvcDisplay.innerHTML == "000" ||
+        (cardNumber.value.length > 0 && cardNumber.value.length < 16)
+    ) {
+        return false;
+    } else {
+        return true;
+    }
+
 }
+
+//submit button
+
+submit.addEventListener("click", function() {
+    massValidate();
+    if (massValidate() == false) {
+        event.preventDefault();
+    } else {
+        event.preventDefault();
+
+        form.classList.add("hidden");
+        thankYouSection.classList.remove("hidden");
+    }
+});
+
+// continue button
+
+continueBtn.addEventListener("click", function() {
+    event.preventDefault();
+    thankYouSection.classList.add("hidden");
+    form.classList.remove("hidden");
+    nameOnCard.innerHTML = cardholder.placeholder;
+    numOnCard.innerHTML = cardNumber.placeholder;
+    expMM.innerHTML = "00";
+    expYY.innerHTML = "0000";
+    cvcDisplay.innerHTML = "000";
+    cardholder.value = "";
+    cardNumber.value = "";
+    expiry[0].value = "";
+    expiry[1].value = "";
+    cvc.value = "";
+    expiryErrorMsg.innerHTML = "";
+});
