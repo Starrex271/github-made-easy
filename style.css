@@ -237,16 +237,7 @@ button:hover {
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width:1024px) {
-    .card-front {
-        left: 75px;
-    }
-    .card-back {
-        left: 14px;
-    }
-}
-
-@media screen and (max-width:768px) {
+@media screen and (min-width:300px) and (max-width:750px) {
     body {
         flex-direction: column;
     }
